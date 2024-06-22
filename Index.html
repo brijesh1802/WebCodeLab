@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="Main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fec20f7af8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="flask-vial-solid.svg" type="image/x-icon">
+    <title>WebCodeLab</title>
+  </head>
+  <body>
+    <div class="h-screen w-screen flex">
+
+      <!-- Code Writing Window -->
+      <div class="code-write w-1/2 h-screen flex flex-col">
+        <div class="html bg-red-400 flex-1 p-1 flex flex-col">
+          <div class="bg-black p-1">
+            <label><i class="fa-brands fa-html5"> Html</i></label>
+          </div>
+          <textarea
+            class="flex-1 w-full resize-none bg-slate-900 px-1"
+            spellcheck="false" id="html-code" onkeyup="run()"></textarea>
+        </div>
+        <div class="css bg-orange-400 flex-1 p-1 flex flex-col">
+          <div class="bg-black p-1">
+            <label><i class="fa-brands fa-css3-alt"> CSS</i></label>
+          </div>
+          <textarea
+            class="flex-1 w-full resize-none bg-slate-900 px-1"
+            spellcheck="false" id="css-code" onkeyup="run()"></textarea>
+        </div>
+        <div class="js bg-blue-500 flex-1 p-1 flex flex-col">
+          <div class="bg-black p-1">
+            <label><i class="fa-brands fa-square-js"> JS</i></label>
+          </div>
+          <textarea
+            class="flex-1 w-full resize-none bg-slate-900 px-1"
+            spellcheck="false" id="js-code" onkeyup="run()"></textarea>
+        </div>
+      </div>
+
+      <!-- Output Window -->
+      <div class="code-output-screen bg-purple-600 w-1/2 h-screen flex flex-col">
+        <div class="flex flex-col flex-1 p-2">
+            <div class="bg-black p-1">
+                <label class="text-white"><i class="fa-solid fa-play"></i> Output</label>
+            </div>
+            <div class="bg-gray-500 flex-1">
+                <iframe id="output" class="border-0 outline-0 bg-white w-full h-full"></iframe>
+            </div>
+        </div>
+    </div>
+
+    </div>
+  </body>
+</html>
